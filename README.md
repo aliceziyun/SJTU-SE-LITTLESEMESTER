@@ -1,0 +1,2 @@
+# SJTU-SE-LITTLESEMESTER
+2020级软件工程夏季学期项目（第7组）
