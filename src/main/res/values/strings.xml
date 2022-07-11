@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Please!</string>
+    <string name="button">EDIT</string>
+    <string name="switch1">按编辑时间排序</string>
+    <string name="switch2">按创建时间排序</string>
+    <string name="backbutton">BACK</string>
+</resources>

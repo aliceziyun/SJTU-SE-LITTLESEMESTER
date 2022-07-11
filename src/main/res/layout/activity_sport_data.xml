@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <ImageButton
+                android:id="@+id/history_title_back"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dip"
+                android:src="@mipmap/ic_arrow_back"
+                android:background="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/history_title_text"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="我的记录"
+                android:textColor="#FFB6C1"
+                android:textSize="24sp"
+                />
+
+            <Button
+                android:id="@+id/test_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="24sp"
+                android:text="总运动时长："
+                android:textColor="#FFB6C1"
+                />
+
+            <TextView
+                android:id="@+id/total_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            >
+            <Button
+                android:id="@+id/running_history_btn"
+                android:layout_width="90dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:text="跑步时间\n 0小时0分0秒"
+                android:textSize="10dp"
+                >
+            </Button>
+
+            <Button
+                android:id="@+id/fitness_history_btn"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:text="健身时间\n 0小时0分0秒"
+                android:textSize="10dp"
+                >
+            </Button>
+
+            <Button
+                android:id="@+id/yoga_history_btn"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="瑜伽时间\n 0小时0分0秒"
+                android:textSize="10dp"
+                >
+            </Button>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="24sp"
+                android:text="今日"
+                android:textColor="#FFB6C1"
+                />
+
+            <Button
+                android:id="@+id/daliy_detail"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+
+                android:text="详细"
+                android:textSize="15sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="累计消耗："
+                    android:textColor="#FFB6C1"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="40dp"
+                    />
+                <TextView
+                    android:id="@+id/total_consume_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFB6C1"
+                    android:textSize="24sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="运动时长："
+                    android:textColor="#FFB6C1"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="40dp"
+                    />
+                <TextView
+                    android:id="@+id/day_total_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFB6C1"
+                    android:textSize="24sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="距目标还有："
+                    android:textColor="#FFB6C1"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="40dp"
+                    />
+                <TextView
+                    android:id="@+id/goal_distance_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFB6C1"
+                    android:textSize="24sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="目标："
+                    android:textColor="#FFB6C1"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="40dp"
+                    />
+                <TextView
+                    android:id="@+id/goal_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFB6C1"
+                    android:textSize="24sp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="24sp"
+                android:text="本周"
+                android:textColor="#FFB6C1"
+                />
+
+            <Button
+                android:id="@+id/weekly_detail"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+
+                android:text="详细"
+                android:textSize="15sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="本周累计运动天数："
+                    android:textColor="#FFB6C1"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="40dp"
+                    />
+                <TextView
+                    android:id="@+id/total_day_within_week_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFB6C1"
+                    android:textSize="24sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="达成目标天数："
+                    android:textColor="#FFB6C1"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="40dp"
+                    />
+                <TextView
+                    android:id="@+id/goal_reach_day_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFB6C1"
+                    android:textSize="24sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="累计消耗："
+                    android:textColor="#FFB6C1"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="40dp"
+                    />
+                <TextView
+                    android:id="@+id/week_total_consume_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFB6C1"
+                    android:textSize="24sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="运动时长："
+                    android:textColor="#FFB6C1"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="40dp"
+                    />
+                <TextView
+                    android:id="@+id/week_total_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFB6C1"
+                    android:textSize="24sp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+</LinearLayout>
