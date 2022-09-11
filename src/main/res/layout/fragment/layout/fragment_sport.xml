@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="运动课程"
+                android:textSize="18sp"/>
+
+            <ImageButton
+                android:id="@+id/course_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:src="@mipmap/ic_search" />
+        </RelativeLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/sport_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFF" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/sport_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/search_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:layout_height="280dp"-->
+<!--        android:background="#a6e1aa"-->
+<!--        android:orientation="vertical">-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="5dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:orientation="horizontal">-->
+<!--            <CheckBox-->
+<!--                android:id="@+id/check_yoga"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:checked="false"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:text="瑜伽" />-->
+<!--            <CheckBox-->
+<!--                android:id="@+id/check_hiit"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:checked="false"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:text="hiit" />-->
+<!--            <CheckBox-->
+<!--                android:id="@+id/check_stretch"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:checked="false"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:text="拉伸" />-->
+<!--            <CheckBox-->
+<!--                android:id="@+id/check_pemara"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:checked="false"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:text="帕梅拉" />-->
+
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+<!--            <EditText-->
+<!--                android:layout_width="300dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:background="@color/white"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:hint="视频名称/关键字"-->
+<!--                />-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+<!--            <com.example.myapplication.view.DoubleSlideSeekBar-->
+<!--                xmlns:custom="http://com.example.try2.DoubleSeekBar"-->
+<!--                android:id="@+id/doubleslide_withoutrule"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_width="300dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                custom:lineHeight="10dp"-->
+<!--                custom:textSize="16sp"-->
+<!--                custom:textColor="#e40627"-->
+<!--                custom:inColor="#0a40f1"-->
+<!--                custom:outColor="#ace208"-->
+<!--                custom:imageLow="@mipmap/ic_launcher_round"-->
+<!--                custom:imageBig="@mipmap/ic_launcher_round"-->
+<!--                custom:imagewidth="20dp"-->
+<!--                custom:imageheight="20dp"-->
+<!--                custom:hasRule="false"-->
+<!--                custom:bigValue="1000"-->
+<!--                custom:smallValue="0"-->
+<!--                />-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:padding="5dp">-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_min_without_rule"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="最小值：0min"-->
+<!--                    android:layout_marginLeft="30dp"-->
+<!--                    />-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_max_without_rule"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="最大值：120min"-->
+<!--                    android:layout_marginLeft="120dp"-->
+<!--                    android:layout_marginRight="10dp"-->
+<!--                    />-->
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+<!--            <Button-->
+<!--                android:id="@+id/btn_start_search"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="√"-->
+<!--                android:layout_gravity="right"-->
+<!--                />-->
+<!--        </LinearLayout>-->
+
+<!--    </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

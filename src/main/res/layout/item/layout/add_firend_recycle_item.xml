@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <ImageView
+        android:id="@+id/image_item_add_friend_avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="24dp" />
+
+    <TextView
+        android:id="@+id/text_item_add_friend_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_toRightOf="@id/image_item_add_friend_avatar"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/text_item_add_friend_total_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:layout_toRightOf="@id/image_item_add_friend_avatar"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="30dp"/>
+
+    <LinearLayout
+        android:id="@+id/linear_item_add_friend_follow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="3dp"
+        android:layout_marginRight="24dp"
+        android:visibility="invisible">
+        <Button
+            android:id="@+id/btn_follow"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="关注"
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="3dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear_item_add_friend_already_follow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="3dp"
+        android:layout_marginRight="24dp"
+        android:visibility="invisible">
+        <Button
+            android:id="@+id/btn_cancel_follow"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="取消关注"
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="3dp"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

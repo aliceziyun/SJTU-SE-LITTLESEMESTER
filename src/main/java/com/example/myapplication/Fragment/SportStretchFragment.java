@@ -12,11 +12,11 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.myapplication.Controller.CourseController;
 import com.example.myapplication.R;
 import com.example.myapplication.Activity.VideoActivity;
-import com.example.myapplication.Controller.CourseController;
-import com.example.myapplication.entity.Course;
+import com.example.myapplication.db.Controller.CourseController;
+import com.example.myapplication.db.entity.Course;
+import com.example.myapplication.util.DateHelper;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,6 +24,7 @@ import java.util.HashMap;
 public class SportStretchFragment extends Fragment {
     private CourseController courseController;
     private ListView listView;
+    private DateHelper dh;
 
     @Override
     public View onCreateView(final LayoutInflater inflater,
@@ -32,6 +33,7 @@ public class SportStretchFragment extends Fragment {
                 container, false);
 
         courseController = new CourseController(getContext());
+        dh = new DateHelper();
         ArrayList<Course> res = courseController.getCourseByType("stretch");
         if (res != null){
             listView = view.findViewById(R.id.stretch_listview);
@@ -39,9 +41,10 @@ public class SportStretchFragment extends Fragment {
             for (int i = 0; i < res.size(); i++){
                 Course course = res.get(i);
                 HashMap<String, Object> map = new HashMap<>();
-                map.put("videoImage", R.drawable.ic_launcher_background);
+                map.put("courseId", course.getId());
+                map.put("videoImage", R.drawable.stretch);
                 map.put("videoTitle", course.getCourseName());
-                map.put("videoDuration", course.getDuration());
+                map.put("videoDuration", "时长：" + dh.secToTime(course.getDuration()));
                 map.put("videoDescription", course.getDescription());
                 listItem.add(map);
             }
@@ -60,6 +63,7 @@ public class SportStretchFragment extends Fragment {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     Intent intent = new Intent(getContext(), VideoActivity.class);
+                    intent.putExtra("courseId", listItem.get(i).get("courseId").toString());
                     startActivity(intent);
 //                    Toast.makeText(getContext(), "你点击了第" + i + "行", Toast.LENGTH_SHORT).show();
                 }

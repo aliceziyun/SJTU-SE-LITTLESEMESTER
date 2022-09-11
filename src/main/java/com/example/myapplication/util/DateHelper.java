@@ -15,6 +15,7 @@ public class DateHelper {
     public String getNowTime(){
         Date date = new Date();
         String str = date.toString();
+        Log.i("DateHelper",str);
         String[] arr = str.split(" ");
         String year = arr[5];
         String day = arr[2];
@@ -69,6 +70,52 @@ public class DateHelper {
         return result;
     }
 
+    /*功能:将时间字符串转换为秒
+     *返回值:一共的秒数
+     */
+    public int timeToSec(String time){
+        Log.i("DateHelper",time);
+        String arr[] = time.split(":");
+//        if(arr[0].charAt(0) == '0'){
+//            arr[0] = arr[0].substring(1,1);
+//        }
+        String hour = arr[0];
+
+//        if(arr[1].charAt(0) == '0'){
+//            arr[1] = arr[1].substring(1,1);
+//        }
+        String minute = arr[1];
+
+//        if(arr[2].charAt(0) == '0'){
+//            arr[2] = arr[2].substring(1,1);
+//        }
+        String sec = arr[2];
+        return Integer.parseInt(hour) * 3600 + Integer.parseInt(minute) * 60 + Integer.parseInt(sec);
+    }
+
+    /*功能:将秒数转换为时间
+     *返回值:时间字符串
+     */
+    public String secToTime(int sec){
+        int int_hour = sec / 3600;
+        int int_minute = sec % 3600 / 60;
+        int int_second = sec % 3600 % 60;
+        String hour = String.valueOf(int_hour);
+        String minute = String.valueOf(int_minute);
+        String second = String.valueOf(int_second);
+        if (0 <= int_hour && int_hour <= 9){
+            hour = "0" + hour;
+        }
+        if (0 <= int_minute && int_minute <= 9){
+            minute = "0" + minute;
+        }
+        if (0 <= int_second && int_second <= 9){
+            second = "0" + second;
+        }
+
+        return hour + ":" + minute + ":" + second;
+    }
+
     private Date getThisWeekMonDay(){
         Date date = new Date();
         Calendar cal = Calendar.getInstance();
@@ -105,7 +152,7 @@ public class DateHelper {
                 return "7";
             case "Aug":
                 return "8";
-            case "Sept":
+            case "Sep":
                 return "9";
             case "Oct":
                 return "10";
@@ -116,5 +163,21 @@ public class DateHelper {
             default:
         }
         return "";
+    }
+
+    /**
+     * 获取当前日期是星期几
+     * @param date
+     * @return
+     */
+    public String getWeekOfDate(Date date) {
+        String[] weekDays = { "Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat" };
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        int w = cal.get(Calendar.DAY_OF_WEEK) - 1;
+        if (w < 0) {
+            w = 0;
+        }
+        return weekDays[w];
     }
 }

@@ -11,10 +11,11 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.myapplication.Fragment.Exercise;
 import com.example.myapplication.Fragment.HomePage;
-import com.example.myapplication.Fragment.Social;
+import com.example.myapplication.Fragment.SocialFragment;
 import com.example.myapplication.Fragment.UserPersonal;
 import com.example.myapplication.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.database.DatabaseReference;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
     private Fragment exercise_fragment;
     private Fragment[] fragments;
     private int lastfragment;
+
+    private DatabaseReference mDatabase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
         personal_fragment = new UserPersonal();
         exercise_fragment = new Exercise();
-        social_fragment = new Social();
+        social_fragment = new SocialFragment();
+//        social_fragment = new SocialFragForTest();
         home_fragment = new HomePage();
         fragments = new Fragment[]{home_fragment,exercise_fragment,social_fragment,personal_fragment};
         initFragment();
@@ -42,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart(){
         super.onStart();
         reloadFragment(lastfragment);
-        Log.d("TAG","here");
     }
 
     private void initFragment() {

@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="4dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:layout_margin="5dp">
+
+        <ImageButton
+            android:id="@+id/backbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:background="@null"
+            android:gravity="left"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:layout_weight="3"/>
+
+        <ImageButton
+            android:id="@+id/favor_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_star_border_24"
+            android:background="@null"
+            android:layout_gravity="right"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="280dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        android:layout_margin="5dp"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:layout_margin="5dp">
+
+            <ImageButton
+                android:id="@+id/play"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_baseline_play_arrow_24"
+                android:background="@drawable/run_bg" />
+
+            <ImageButton
+                android:id="@+id/pause"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/run_bg"
+                android:src="@drawable/ic_baseline_play_arrow_24"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/replay"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/run_stop"
+            android:src="@drawable/ic_baseline_replay_24" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right">
+                <TextView
+                    android:id="@+id/tv_video_favor_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:text="100 收藏"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:layout_margin="5dp"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_video_play_times"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toLeftOf="@id/tv_video_favor_number"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="100 播放"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_margin="3dp">
+        <TextView
+            android:id="@+id/video_play_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="hhhhhh"
+            android:textSize="28sp"
+            />
+        <TextView
+            android:id="@+id/video_play_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="233333"
+            android:textSize="16sp"
+            android:layout_margin="6dp"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -14,8 +14,9 @@ import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.R;
 import com.example.myapplication.Activity.VideoActivity;
-import com.example.myapplication.Controller.CourseController;
-import com.example.myapplication.entity.Course;
+import com.example.myapplication.db.Controller.CourseController;
+import com.example.myapplication.db.entity.Course;
+import com.example.myapplication.util.DateHelper;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,6 +24,7 @@ import java.util.HashMap;
 public class SportHiitFragment extends Fragment {
     private CourseController courseController;
     private ListView listView;
+    private DateHelper dh;
 
     @Override
     public View onCreateView(final LayoutInflater inflater,
@@ -30,6 +32,7 @@ public class SportHiitFragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_sport_hiit,
                 container, false);
         courseController = new CourseController(getContext());
+        dh = new DateHelper();
         ArrayList<Course> res = courseController.getCourseByType("hiit");
         if (res != null){
             listView = view.findViewById(R.id.hiit_listview);
@@ -37,9 +40,10 @@ public class SportHiitFragment extends Fragment {
             for (int i = 0; i < res.size(); i++){
                 Course course = res.get(i);
                 HashMap<String, Object> map = new HashMap<>();
-                map.put("videoImage", R.drawable.ic_launcher_background);
+                map.put("courseId", course.getId());
+                map.put("videoImage", R.drawable.hilt);
                 map.put("videoTitle", course.getCourseName());
-                map.put("videoDuration", course.getDuration());
+                map.put("videoDuration", "时长：" + dh.secToTime(course.getDuration()));
                 map.put("videoDescription", course.getDescription());
                 listItem.add(map);
             }
@@ -58,6 +62,7 @@ public class SportHiitFragment extends Fragment {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     Intent intent = new Intent(getContext(), VideoActivity.class);
+                    intent.putExtra("courseId", listItem.get(i).get("courseId").toString());
                     startActivity(intent);
 //                    Toast.makeText(getContext(), "你点击了第" + i + "行", Toast.LENGTH_SHORT).show();
                 }

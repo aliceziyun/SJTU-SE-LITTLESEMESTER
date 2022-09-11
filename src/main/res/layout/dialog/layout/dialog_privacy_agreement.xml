@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_margin="3dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="用户隐私协议"
+            android:gravity="center_horizontal"
+            android:textSize="18sp"
+            android:padding="3dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/grey"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_margin="3dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_margin="3dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="提示条款：\n
+您的信任对我们非常重要，我们深知个人信息对您的重要性，我们将按法律法规要求，采取相应安全保护措施，尽力保护您的个人信息安全可控。鉴于此，我们制定本《隐私协议》（以下简称“本协议”）视为对用户隐私保护的许诺，并提醒您：\n
+需要特别说明的是， 本协议仅适用于产品及服务，不适用于其他第三方向您提供的服务。在使用产品服务前，请您务必仔细阅读并透彻理解本协议，在确认充分理解并同意后再开始使用。您的使用行为即视为对本协议的充分理解并同意。 如对本 协议 内容有任何疑问、意见或建议，您可通过App提供的各种联系方式与我们联系。\n
+一、 我们拥有的权限及对您个人信息的收集使用\n
+我们仅会在合法、正当、必要的前提下收集、使用您的信息，在您使用我们的产品或服务时，我们需要 / 可能需要收集和使用您的个人信息的场景仅包括:为实现向您提供我们产品及/或服务的基本功能，您须授权我们收集、使用的必要信息。如您拒绝提供相应的信息，您将无法正常使用我们的产品及 / 或服务。\n
+（一） 您充分理解并同意继续使用本软件的服务，本软件会获取您如下权限：\n
+1.获取 相册读写权限 ，此权限用于您上传照片制作证件照；\n
+2.获取 相机权限 ，此权限用于您拍摄照片制作证件照；\n
+3. 允许应用 读取存储卡中的内容 ，此权限用于获取图片制作证件照；\n
+4. 允许应用 修改或删除存储卡中的内容 ，此权限用于保存证件照功能；\n
+5.获取 您的人脸图像信息 ，主要用于您使用照片拍摄、证件照制作、证件照片环境检测功能时判断您是否可以制作合格的证件照；
+\n
+6.获取 您的粗略位置，此权限用于跑步定位服务；
+\n
+7.获取您的网络状态，用于检查网络环境及提供断网提示。\n
+二、 我们如何保护和管理您的个人信息\n
+尊重个人隐私是的责任，当您确认并同意本协议使用我们的产品或服务时，为了保护您的个人隐私， 采取以下方式对您的个人信息进行保护和管理：
+\n
+1、 我们已采取符合业内标准、合理可行的安全防护措施保护您的个人信息，防止个人信息遭到未经授权访问、公开披露、使用、修改。我们会使用加密技术提高个人信息的安全性；我们会使用受信赖的保护机制防止个人信息遭到恶意攻击；我们会部署访问控制机制，尽力确保只有授权人员才可访问个人信息。\n
+2、 建立专业安全团队会对您的个人信息（包括直接和间接的方式获取的信息）会进行安全加固（包括敏感信息报备、敏感信息加密存储、定期清除等），同时对于间接获取的个人信息，我们会对其来源进行合法性确认。\n
+
+3、 我们对您的个人信息采取了短暂保留期。对 您的登录信息进行短期保留，如较长时间未登录，我们将删除您的登录信息。\n
+4、 在未经用户授权时不得向第三方公开、编辑或透露用户个人资料的内容，但由于政府要求、法律 协议 需要等原因除外。在用户发送信息的过程中和本公司收到信息后，本公司将遵守行业通用的标准来保护用户的私人信息。\n
+5、 当我们的产品或服务发生停止运营的情形时，我们将以推送通知、公告等形式通知您，并在合理的期限内删除您的个人信息或进行匿名化处理。\n
+Please! 开发组\n
+最近更新日期：2022-09-11"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="3dp"
+        android:gravity="right">
+
+        <Button
+            android:id="@+id/agree_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我已知晓"
+            android:textSize="14sp"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

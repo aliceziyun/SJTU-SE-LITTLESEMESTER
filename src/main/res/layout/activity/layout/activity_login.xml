@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="@drawable/login_bg2"
+    >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:text="密码登录"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:padding="5dp"
+                    android:layout_marginTop="80dp" />
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="请输入昵称"
+                    android:textColorHint="#DDDDDD"
+                    android:textSize="20sp"
+                    android:inputType="text"
+                    android:paddingLeft="16dp"
+                    android:background="@drawable/transparent_submit_card"
+                    android:layout_marginBottom="3dp"
+                    android:textColor="#FFFFFF"/>
+
+                <EditText
+                    android:id="@+id/pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="6dp"
+                    android:hint="请输入密码"
+                    android:textColorHint="#DDDDDD"
+                    android:inputType="textPassword"
+                    android:paddingLeft="16dp"
+                    android:textColor="#FDFDFD"
+                    android:textSize="20sp"
+                    android:background="@drawable/transparent_submit_card"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pwd"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/save_pwd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:text="记住我"
+                        android:textSize="18dp"
+                        android:textColor="#F6F6F6" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="3dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="还未注册账号"
+                            android:textColor="#F6F6F6"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/register_acc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:text="点我注册"
+                            android:textColor="#2196F3"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="2dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="60dp">
+
+                <Button
+                    android:id="@+id/loginBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:textColor="#FFFFFF"
+                    android:textSize="23sp"
+                    android:background="@drawable/theme_org_submit_card"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="30dp">
+
+                <CheckBox
+                    android:id="@+id/privacy_agreement_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="我已同意"
+                    android:textSize="14sp"
+                    android:textColor="#F6F6F6"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/privacy_agreement_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="隐私协议"
+                    android:gravity="center_vertical"
+                    android:textColor="#2196F3"
+                    android:textSize="14sp"
+                    android:padding="1dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="bottom"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="5dp"
+                >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Good Health is Always Young"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Copyright@SSHX"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:layout_gravity="bottom"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

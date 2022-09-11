@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/tohome"
         android:title="Home"
-        android:icon="@mipmap/ic_stars"/>
+        android:icon="@drawable/ic_baseline_house_24"
+        app:showAsAction="ifRoom"
+        android:enabled="true"/>
     <item android:id="@+id/exercise"
         android:title="Exercise"
-        android:icon="@mipmap/ic_email"/>
+        android:icon="@drawable/ic_baseline_directions_run_24"
+        app:showAsAction="ifRoom"
+        android:enabled="true"/>
     <item android:id="@+id/social"
         android:title="Social"
-        android:icon="@mipmap/ic_email"/>
+        android:icon="@drawable/ic_baseline_chat_bubble_24"
+        app:showAsAction="ifRoom"
+        android:enabled="true"/>
     <item android:id="@+id/personal"
         android:title="Personal"
-        android:icon="@mipmap/ic_account"/>
-
+        android:icon="@drawable/ic_baseline_person_24"
+        app:showAsAction="ifRoom"
+        android:enabled="true"/>
 </menu>

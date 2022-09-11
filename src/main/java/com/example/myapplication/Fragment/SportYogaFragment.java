@@ -1,5 +1,7 @@
 package com.example.myapplication.Fragment;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,25 +9,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.myapplication.db.Controller.CourseController;
 import com.example.myapplication.R;
 //import com.example.myapplication.activity.SportActivity;
 import com.example.myapplication.Activity.VideoActivity;
-import com.example.myapplication.Controller.CourseController;
-import com.example.myapplication.entity.Course;
+import com.example.myapplication.db.entity.Course;
+import com.example.myapplication.util.DateHelper;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 public class SportYogaFragment extends Fragment {
     private CourseController courseController;
     private ListView listView;
+    private DateHelper dh;
+
+
 
     @Override
     public View onCreateView(final LayoutInflater inflater,
@@ -33,6 +36,9 @@ public class SportYogaFragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_sport_yoga,
                 container, false);
         courseController = new CourseController(getContext());
+        dh = new DateHelper();
+
+
         ArrayList<Course> res = courseController.getCourseByType("yoga");
         if (res != null){
             listView = view.findViewById(R.id.yoga_listview);
@@ -40,9 +46,10 @@ public class SportYogaFragment extends Fragment {
             for (int i = 0; i < res.size(); i++){
                 Course course = res.get(i);
                 HashMap<String, Object> map = new HashMap<>();
-                map.put("videoImage", R.drawable.ic_launcher_background);
+                map.put("courseId", course.getId());
+                map.put("videoImage", R.drawable.yoga);
                 map.put("videoTitle", course.getCourseName());
-                map.put("videoDuration", course.getDuration());
+                map.put("videoDuration", "时长：" + dh.secToTime(course.getDuration()));
                 map.put("videoDescription", course.getDescription());
                 listItem.add(map);
             }
@@ -61,8 +68,9 @@ public class SportYogaFragment extends Fragment {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     Intent intent = new Intent(getContext(), VideoActivity.class);
+                    intent.putExtra("courseId", listItem.get(i).get("courseId").toString());
+//                    Toast.makeText(getContext(), "courseId: " + listItem.get(i).get("courseId").toString(), Toast.LENGTH_SHORT).show();
                     startActivity(intent);
-//                    Toast.makeText(getContext(), "你点击了第" + i + "行", Toast.LENGTH_SHORT).show();
                 }
             });
         }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="echarts/echarts.min.js"></script>
+</head>
+<body style="display: flex; background-color:transparent">
+<div id="main" style="width: 100%;height: calc(100vh - 20px); margin: 0 auto;"></div>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('main'), '%theme%');
+    var option  = %options%;
+    var prevSeries  = 0;
+    var prevData    = 0;
+    myChart.setOption(option);
+    myChart.on('click', function(params) {
+        BAFIKA.indexClick(params.dataIndex);
+        setHighlight(params.seriesIndex, params.dataIndex);
+    });
+
+    function setHighlight(seriesIndex, dataIndex) {
+        myChart.dispatchAction({
+            type: 'downplay',
+            seriesIndex: prevSeries,
+            dataIndex: prevData
+        });
+
+        myChart.dispatchAction({
+            type: 'hideTip',
+            seriesIndex: prevSeries,
+            dataIndex: prevData
+        });
+
+        myChart.dispatchAction({
+            type: 'highlight',
+            seriesIndex: seriesIndex,
+            dataIndex: dataIndex
+        });
+
+        myChart.dispatchAction({
+            type: 'showTip',
+            seriesIndex: seriesIndex,
+            dataIndex: dataIndex
+        });
+
+        prevSeries  = seriesIndex;
+        prevData    = dataIndex;
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.RunningActivity">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.amap.api.maps.MapView>
+
+    <Button
+        android:id="@+id/start_running_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerInParent="true"
+        android:text="开始跑步"
+        />
+
+    <ImageButton
+        android:id="@+id/pause_running_btn"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="80dp"
+        android:visibility="invisible"
+        android:src="@drawable/ic_baseline_pause_24"
+        android:background="@drawable/run_stop"
+        />
+
+    <include
+        layout="@layout/running_banner" />
+
+    <ImageButton
+        android:id="@+id/continue_running_btn"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="80dp"
+        android:visibility="invisible"
+        android:background="@drawable/run_continue"
+        android:src="@drawable/ic_baseline_play_arrow_24"
+        />
+
+    <ImageButton
+        android:id="@+id/end_running_btn"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="60dp"
+        android:visibility="invisible"
+        android:background="@drawable/run_finish"
+        android:src="@drawable/ic_baseline_stop_24"
+        />
+
+</RelativeLayout>
